@@ -36,7 +36,86 @@ def place_piece(row, column, piece):
 
 
 def draw_figure(row, column, piece):
-    pygame.draw.circle(screen, COLORS['blue'], (int(WIDTH/GRID * (column + 1/2)), int((HEIGHT/GRID * (row + 1/2)))), int(CIRCLE_RADIUS), int(FIGURE_WIDTH))
+    ima = Piece(piece)
+    
+    #Blue figures
+    if ima.blue:
+        #Round blue figures
+        if ima.round:
+            #Tall round blue figures
+            if ima.tall:
+                #Pinched tall round blue figure
+                if ima.pinched:
+                    print('Pinched tall round blue figure')
+                #Unpinched tall round blue figure figure
+                else:
+                    print('Unpinched tall round blue figure figure')
+            #Short figures
+            else:
+                #Pinched short round blue figure
+                if ima.pinched:
+                    print('Pinched short round blue figure')
+                #Unpinched short round blue figure
+                else:
+                    print('Unpinched short round blue figure')
+        #Square blue figures
+        else:
+            #Tall square blue figures
+            if ima.tall:
+                #Pinched tall square blue figure
+                if ima.pinched:
+                    print('Pinched tall square blue figure')
+                #Unpinched tall square blue figure
+                else:
+                    print('Unpinched tall square blue figure')
+            #Short square blue figures
+            else:
+                #Pinched short square blue figure
+                if ima.pinched:
+                    print('Pinched short square blue figure')
+                #Unpinched short square blue figure
+                else:
+                    print('Unpinched short square blue figure')
+    #Red figures
+    else:
+        #Round red figures
+        if ima.round:
+            #Tall round red figures
+            if ima.tall:
+                #Pinched tall round red figure
+                if ima.pinched:
+                    pass
+                #Unpinched tall round red figure
+                else:
+                    pass
+            #Short round red figures
+            else:
+                #Pinched short round red figure
+                if ima.pinched:
+                    pass
+                #Unpinched short round red figure
+                else:
+                    pass
+        #Square red figures
+        else:
+            #Tall square red figures
+            if ima.tall:
+                #Pinched tall square red figure
+                if ima.pinched:
+                    pass
+                #Unpinched tall square red figure
+                else:
+                    pass
+            #Short square red figures
+            else:
+                #Pinched square red figure
+                if ima.pinched:
+                    pass
+                #Unpinched square red figure
+                else:
+                    pass
+
+
     pygame.display.update()
 
 
