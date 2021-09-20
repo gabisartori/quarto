@@ -68,10 +68,13 @@ def draw_figure(row, column, piece):
             if ima.tall:
                 #Pinched tall square blue figure
                 if ima.pinched:
-                    print('Pinched tall square blue figure')
+                    pygame.draw.rect(screen, COLORS['dark_blue'], pygame.Rect(WIDTH/GRID * column + SPACE - CONTOUR_WIDTH/2, HEIGHT/GRID * row + SPACE - CONTOUR_WIDTH/2, CONTOUR_SIDE, CONTOUR_SIDE))
+                    pygame.draw.rect(screen, COLORS['blue'], pygame.Rect(WIDTH/GRID * column + SPACE, HEIGHT/GRID * row + SPACE, SQUARE_SIDE, SQUARE_SIDE))
+                    pygame.draw.circle(screen, COLORS['gray'], (int(WIDTH/GRID * (column + 1/2)), int((HEIGHT/GRID * (row + 1/2)))), PINCH_RADIUS, PINCH_WIDTH)
                 #Unpinched tall square blue figure
                 else:
-                    print('Unpinched tall square blue figure')
+                    pygame.draw.rect(screen, COLORS['dark_blue'], pygame.Rect(WIDTH/GRID * column + SPACE - CONTOUR_WIDTH/2, HEIGHT/GRID * row + SPACE - CONTOUR_WIDTH/2, CONTOUR_SIDE, CONTOUR_SIDE))
+                    pygame.draw.rect(screen, COLORS['blue'], pygame.Rect(WIDTH/GRID * column + SPACE, HEIGHT/GRID * row + SPACE, SQUARE_SIDE, SQUARE_SIDE))
             #Short square blue figures
             else:
                 #Pinched short square blue figure
@@ -112,10 +115,14 @@ def draw_figure(row, column, piece):
             if ima.tall:
                 #Pinched tall square red figure
                 if ima.pinched:
-                    pass
+                    pygame.draw.rect(screen, COLORS['dark_red'], pygame.Rect(WIDTH/GRID * column + SPACE - CONTOUR_WIDTH/2, HEIGHT/GRID * row + SPACE - CONTOUR_WIDTH/2, CONTOUR_SIDE, CONTOUR_SIDE))
+                    pygame.draw.rect(screen, COLORS['red'], pygame.Rect(WIDTH/GRID * column + SPACE, HEIGHT/GRID * row + SPACE, SQUARE_SIDE, SQUARE_SIDE))
+                    pygame.draw.circle(screen, COLORS['gray'], (int(WIDTH/GRID * (column + 1/2)), int((HEIGHT/GRID * (row + 1/2)))), PINCH_RADIUS, PINCH_WIDTH)
+
                 #Unpinched tall square red figure
                 else:
-                    pass
+                    pygame.draw.rect(screen, COLORS['dark_red'], pygame.Rect(WIDTH/GRID * column + SPACE - CONTOUR_WIDTH/2, HEIGHT/GRID * row + SPACE - CONTOUR_WIDTH/2, CONTOUR_SIDE, CONTOUR_SIDE))
+                    pygame.draw.rect(screen, COLORS['red'], pygame.Rect(WIDTH/GRID * column + SPACE, HEIGHT/GRID * row + SPACE, SQUARE_SIDE, SQUARE_SIDE))
             #Short square red figures
             else:
                 #Pinched square red figure
