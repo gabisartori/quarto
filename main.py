@@ -46,18 +46,22 @@ def draw_figure(row, column, piece):
             if ima.tall:
                 #Pinched tall round blue figure
                 if ima.pinched:
-                    print('Pinched tall round blue figure')
+                    pygame.draw.circle(screen, COLORS['dark_blue'], (int(WIDTH/GRID * (column + 1/2)), int((HEIGHT/GRID * (row + 1/2)))), CONTOUR_RADIUS, CONTOUR_WIDTH)
+                    pygame.draw.circle(screen, COLORS['blue'], (int(WIDTH/GRID * (column + 1/2)), int((HEIGHT/GRID * (row + 1/2)))), CIRCLE_RADIUS, FIGURE_WIDTH)
+                    pygame.draw.circle(screen, COLORS['gray'], (int(WIDTH/GRID * (column + 1/2)), int((HEIGHT/GRID * (row + 1/2)))), PINCH_RADIUS, PINCH_WIDTH)
                 #Unpinched tall round blue figure figure
                 else:
-                    print('Unpinched tall round blue figure figure')
+                    pygame.draw.circle(screen, COLORS['dark_blue'], (int(WIDTH/GRID * (column + 1/2)), int((HEIGHT/GRID * (row + 1/2)))), CONTOUR_RADIUS, CONTOUR_WIDTH)
+                    pygame.draw.circle(screen, COLORS['blue'], (int(WIDTH/GRID * (column + 1/2)), int((HEIGHT/GRID * (row + 1/2)))), CIRCLE_RADIUS, FIGURE_WIDTH)
             #Short figures
             else:
                 #Pinched short round blue figure
                 if ima.pinched:
-                    print('Pinched short round blue figure')
+                    pygame.draw.circle(screen, COLORS['blue'], (int(WIDTH/GRID * (column + 1/2)), int((HEIGHT/GRID * (row + 1/2)))), CIRCLE_RADIUS, FIGURE_WIDTH)
+                    pygame.draw.circle(screen, COLORS['gray'], (int(WIDTH/GRID * (column + 1/2)), int((HEIGHT/GRID * (row + 1/2)))), PINCH_RADIUS, PINCH_WIDTH)
                 #Unpinched short round blue figure
                 else:
-                    print('Unpinched short round blue figure')
+                    pygame.draw.circle(screen, COLORS['blue'], (int(WIDTH/GRID * (column + 1/2)), int((HEIGHT/GRID * (row + 1/2)))), CIRCLE_RADIUS, FIGURE_WIDTH)
         #Square blue figures
         else:
             #Tall square blue figures
@@ -84,18 +88,22 @@ def draw_figure(row, column, piece):
             if ima.tall:
                 #Pinched tall round red figure
                 if ima.pinched:
-                    pass
+                    pygame.draw.circle(screen, COLORS['dark_red'], (int(WIDTH/GRID * (column + 1/2)), int((HEIGHT/GRID * (row + 1/2)))), CONTOUR_RADIUS, CONTOUR_WIDTH)
+                    pygame.draw.circle(screen, COLORS['red'], (int(WIDTH/GRID * (column + 1/2)), int((HEIGHT/GRID * (row + 1/2)))), CIRCLE_RADIUS, FIGURE_WIDTH)
+                    pygame.draw.circle(screen, COLORS['gray'], (int(WIDTH/GRID * (column + 1/2)), int((HEIGHT/GRID * (row + 1/2)))), PINCH_RADIUS, PINCH_WIDTH)
                 #Unpinched tall round red figure
                 else:
-                    pass
+                    pygame.draw.circle(screen, COLORS['dark_red'], (int(WIDTH/GRID * (column + 1/2)), int((HEIGHT/GRID * (row + 1/2)))), CONTOUR_RADIUS, CONTOUR_WIDTH)
+                    pygame.draw.circle(screen, COLORS['red'], (int(WIDTH/GRID * (column + 1/2)), int((HEIGHT/GRID * (row + 1/2)))), CIRCLE_RADIUS, FIGURE_WIDTH)
             #Short round red figures
             else:
                 #Pinched short round red figure
                 if ima.pinched:
-                    pass
+                    pygame.draw.circle(screen, COLORS['red'], (int(WIDTH/GRID * (column + 1/2)), int((HEIGHT/GRID * (row + 1/2)))), CIRCLE_RADIUS, FIGURE_WIDTH)
+                    pygame.draw.circle(screen, COLORS['gray'], (int(WIDTH/GRID * (column + 1/2)), int((HEIGHT/GRID * (row + 1/2)))), PINCH_RADIUS, PINCH_WIDTH)
                 #Unpinched short round red figure
                 else:
-                    pass
+                    pygame.draw.circle(screen, COLORS['red'], (int(WIDTH/GRID * (column + 1/2)), int((HEIGHT/GRID * (row + 1/2)))), CIRCLE_RADIUS, FIGURE_WIDTH)
         #Square red figures
         else:
             #Tall square red figures

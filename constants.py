@@ -5,9 +5,12 @@ GRID = 4 # NxN Grid
 
 
 COLORS = {
-    'background': (0, 0, 0),
-    'line': (255, 255, 255),
+    'background': (200, 200, 200),
+    'line': (0, 0, 0),
     'red': (255, 0, 0),
-    'blue': (0, 0, 255)
+    'dark_red': (150, 0, 0),
+    'blue': (0, 0, 255),
+    'dark_blue': (0, 0, 150),
+    'gray': (100, 100, 100)
 }
 
